@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 // import { StatusEnum } from "../../enums/rent";
 import { formatCurrency } from "../../utils/currency";
-import { formatDate } from "../../utils/date";
+import { formatDateBR } from "../../utils/date";
 import { get } from '../../services/RentService';
 import * as S from "./styles";
 
@@ -74,10 +74,10 @@ export const MyRents = () => {
               </p>
 
               <p>
-                <span>Retirada em:</span> {formatDate(new Date(rent.dataInicio).getTime())}
+                <span>Retirada em:</span> {formatDateBR(new Date(rent.dataInicio).getTime())}
               </p>
               <p>
-                <span>Devolução em:</span> {formatDate(new Date(rent.dataTermino).getTime())}
+                <span>Devolução em:</span> {formatDateBR(new Date(rent.dataTermino).getTime())}
               </p>
               <p>
                 <span>Valor total pago:</span> {formatCurrency(rent.valorTotalReserva)}
