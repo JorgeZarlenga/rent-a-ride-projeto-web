@@ -14,6 +14,6 @@ const payRent = (data: IRent) =>
   fetch(`reserva/cadastrar`, {
     method: "POST",
     body: JSON.stringify(data),
-  }).then((response) => response.json());
+  });
 
 export { get, getById, payRent };
